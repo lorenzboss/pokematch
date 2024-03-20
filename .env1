@@ -1,2 +1,0 @@
-URL=localhost:4040/
-DB_URL=mongodb://localhost:27017/pokeDB
