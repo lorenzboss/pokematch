@@ -3,7 +3,7 @@ const { Schema, model } = mongoose;
 
 const winnerSchema = new Schema({
   user: String,
-  time: String,
+  time: Number,
   moves: Number
 });
 
