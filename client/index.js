@@ -19,10 +19,8 @@ fetch("/pokeAPI")
     let matchedPairs = 0;
 
 
-    let seconds = 0;
-    let minutes = 0;
-    let finalTime = '';
-    let movesCount = 0;
+    let time = 0;
+    let moves = 0;
     let timerInterval;
 
 
@@ -39,26 +37,15 @@ fetch("/pokeAPI")
     }
 
     function updateTimer() {
-      seconds += 1;
-      if (seconds >= 60) {
-        minutes += 1;
-        seconds = 0;
-      }
+      time += 1;
 
-      let secondsValue = seconds < 10 ? `0${seconds}` : seconds;
-      let minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-
-
-      document.getElementById(
-        "time"
-      ).innerHTML = `<span>Time: ${minutesValue}:${secondsValue}</span>`;
-      finalTime = `${minutesValue}:${secondsValue}`
+      document.getElementById("time").innerHTML = `<span>seconds: ${time}</span>`;
     }
 
     function updateMoves() {
-      movesCount++;
+      moves++;
 
-      document.getElementById("moves").innerHTML = `<span>Moves: ${movesCount}</span>`;
+      document.getElementById("moves").innerHTML = `<span>moves: ${moves}</span>`;
     }
 
 
@@ -102,15 +89,13 @@ fetch("/pokeAPI")
 
               if (matchedPairs === shuffledPokemonIds.length / 2) {
                 setTimeout(() => {
-                  let user = prompt("Ranking");
-                  let time = finalTime;
-                  let moves = movesCount;
+                  let user = prompt("Name:");
                   fetch('/api/winner', {
                     method: 'POST',
                     headers: {
                       "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({user, moves, time})
+                    body: JSON.stringify({ user, moves, time })
                   })
                   .then((response) => response.json())
                   .then((data) => console.log(data))
