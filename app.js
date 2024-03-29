@@ -8,6 +8,7 @@ const PORT = process.env.PORT ?? 4040;
 
 const navController = require('./server/controllers/navController');
 const winController = require('./server/controllers/winController');
+const leaderboardController = require('./server/controllers/leaderboardController');
 
 app.use(express.static(path.join(__dirname, './client')));
 
@@ -29,3 +30,5 @@ app.post('/api/winner', winController.create);
 app.listen(PORT, () => {
     console.log(`Listening on http://localhost:${PORT}`);
 });
+
+app.get('/api/leaderboard', leaderboardController.getLeaderboard);
