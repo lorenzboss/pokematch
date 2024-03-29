@@ -143,6 +143,12 @@ fetch("/pokeAPI")
       }
     }
 
+    console.log(shuffledPokemonIds[0], shuffledPokemonIds[1], shuffledPokemonIds[2], shuffledPokemonIds[3])
+    console.log(shuffledPokemonIds[4], shuffledPokemonIds[5], shuffledPokemonIds[6], shuffledPokemonIds[7])
+    console.log(shuffledPokemonIds[8], shuffledPokemonIds[9], shuffledPokemonIds[10], shuffledPokemonIds[11])
+    console.log(shuffledPokemonIds[12], shuffledPokemonIds[13], shuffledPokemonIds[14], shuffledPokemonIds[15])
+
+
     createGame();
   })
   .catch((err) => {
