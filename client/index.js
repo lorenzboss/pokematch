@@ -67,7 +67,7 @@ fetch("/pokeAPI")
       img.alt = data.name;
       box.appendChild(img);
 
-    
+
       box.onclick = function () {
         initializeTimer();
 
@@ -97,11 +97,11 @@ fetch("/pokeAPI")
                     },
                     body: JSON.stringify({ user, moves, time })
                   })
-                  .then((response) => response.json())
-                  .then((data) => console.log(data))
-                  .catch((err) => {
-                    console.log(`Error ${err}`)
-                  });
+                    .then((response) => response.json())
+                    .then((data) => console.log(data))
+                    .catch((err) => {
+                      console.log(`Error ${err}`)
+                    });
                   stopTimer();
                 }, 500);
               }
@@ -138,4 +138,20 @@ fetch("/pokeAPI")
   })
   .catch((err) => {
     console.error(`Error getting Pokémon data ${err}`);
+  });
+
+
+
+fetch("/api/leaderboard")
+  .then((response) => response.json())
+  .then((leaderboard) => {
+    const leaderboardList = document.getElementById("leaderboard");
+    leaderboard.forEach((entry, index) => {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `${entry.user} <br>${entry.moves} moves<br>${entry.time} seconds`;
+      leaderboardList.appendChild(listItem);
+    });
+  })
+  .catch((err) => {
+    console.error(`Error getting leaderboard data: ${err}`);
   });
