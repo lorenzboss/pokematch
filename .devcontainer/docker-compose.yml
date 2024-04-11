@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 
 services:
   app:
@@ -9,7 +9,7 @@ services:
       - URL=${URL}
       - DB_URL=${DB_URL}
     depends_on:
-      - db 
+      - db
     command: /bin/sh -c "while sleep 1000; do :; done"
   db:
     image: mongo
@@ -26,8 +26,3 @@ services:
       - ME_CONFIG_MONGODB_PORT=27017
 volumes:
   dbdata:
-
-
-
-
- 

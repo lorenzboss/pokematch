@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'ADLaM Display', cursive;
+  font-family: "ADLaM Display", cursive;
 }
 
 body {
@@ -36,7 +36,7 @@ body {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   border: none;
-  font-size: 1.0em;
+  font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   cursor: pointer;
@@ -62,7 +62,7 @@ body {
 }
 
 .generators {
-  display: flex;  
+  display: flex;
   color: #6563ff;
   justify-content: space-between;
   width: 100%;
@@ -93,7 +93,7 @@ body {
 }
 
 .item::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: #fff;
@@ -132,6 +132,6 @@ body {
 
 @media only screen and (max-width: 1100px) {
   .sidebar {
-      display: none; 
+    display: none;
   }
 }

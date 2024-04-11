@@ -8,21 +8,32 @@ fetch("/pokeAPI")
     });
 
     const pokemonIds = [
-      "1", "1", "2", "2", "3", "3", "4", "4",
-      "5", "5", "6", "6", "7", "7", "9", "9"
+      "1",
+      "1",
+      "2",
+      "2",
+      "3",
+      "3",
+      "4",
+      "4",
+      "5",
+      "5",
+      "6",
+      "6",
+      "7",
+      "7",
+      "9",
+      "9",
     ];
-
 
     let shuffledPokemonIds = pokemonIds.sort(() => Math.random() - 0.5);
 
     let flippedCards = [];
     let matchedPairs = 0;
 
-
     let time = 0;
     let moves = 0;
     let timerInterval;
-
 
     let gameStarted = false;
 
@@ -39,15 +50,18 @@ fetch("/pokeAPI")
     function updateTimer() {
       time += 1;
 
-      document.getElementById("time").innerHTML = `<span>seconds: ${time}</span>`;
+      document.getElementById(
+        "time"
+      ).innerHTML = `<span>seconds: ${time}</span>`;
     }
 
     function updateMoves() {
       moves++;
 
-      document.getElementById("moves").innerHTML = `<span>moves: ${moves}</span>`;
+      document.getElementById(
+        "moves"
+      ).innerHTML = `<span>moves: ${moves}</span>`;
     }
-
 
     function initializeTimer() {
       if (!gameStarted) {
@@ -55,7 +69,6 @@ fetch("/pokeAPI")
         gameStarted = true;
       }
     }
-
 
     function createPokemonBox(pokemonId) {
       const data = pokemonAPI[pokemonId];
@@ -66,7 +79,6 @@ fetch("/pokeAPI")
       img.src = data.sprites.front_default;
       img.alt = data.name;
       box.appendChild(img);
-
 
       box.onclick = function () {
         initializeTimer();
@@ -90,17 +102,17 @@ fetch("/pokeAPI")
               if (matchedPairs === shuffledPokemonIds.length / 2) {
                 setTimeout(() => {
                   let user = prompt("Name:");
-                  fetch('/api/winner', {
-                    method: 'POST',
+                  fetch("/api/winner", {
+                    method: "POST",
                     headers: {
                       "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({ user, moves, time })
+                    body: JSON.stringify({ user, moves, time }),
                   })
                     .then((response) => response.json())
                     .then((data) => console.log(data))
                     .catch((err) => {
-                      console.log(`Error ${err}`)
+                      console.log(`Error ${err}`);
                     });
                   stopTimer();
                 }, 500);
@@ -128,19 +140,36 @@ fetch("/pokeAPI")
       }
     }
 
-    console.log(shuffledPokemonIds[0], shuffledPokemonIds[1], shuffledPokemonIds[2], shuffledPokemonIds[3])
-    console.log(shuffledPokemonIds[4], shuffledPokemonIds[5], shuffledPokemonIds[6], shuffledPokemonIds[7])
-    console.log(shuffledPokemonIds[8], shuffledPokemonIds[9], shuffledPokemonIds[10], shuffledPokemonIds[11])
-    console.log(shuffledPokemonIds[12], shuffledPokemonIds[13], shuffledPokemonIds[14], shuffledPokemonIds[15])
-
+    console.log(
+      shuffledPokemonIds[0],
+      shuffledPokemonIds[1],
+      shuffledPokemonIds[2],
+      shuffledPokemonIds[3]
+    );
+    console.log(
+      shuffledPokemonIds[4],
+      shuffledPokemonIds[5],
+      shuffledPokemonIds[6],
+      shuffledPokemonIds[7]
+    );
+    console.log(
+      shuffledPokemonIds[8],
+      shuffledPokemonIds[9],
+      shuffledPokemonIds[10],
+      shuffledPokemonIds[11]
+    );
+    console.log(
+      shuffledPokemonIds[12],
+      shuffledPokemonIds[13],
+      shuffledPokemonIds[14],
+      shuffledPokemonIds[15]
+    );
 
     createGame();
   })
   .catch((err) => {
     console.error(`Error getting Pokémon data ${err}`);
   });
-
-
 
 fetch("/api/leaderboard")
   .then((response) => response.json())
