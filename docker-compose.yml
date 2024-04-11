@@ -1,5 +1,4 @@
-
-version: '3.9'
+version: "3.9"
 
 services:
   app:
@@ -11,12 +10,12 @@ services:
       - DB_URL=${DB_URL}
     depends_on:
       - db
-    command: ["npm", "start"]
   db:
     image: mongo
     ports:
       - "27017:27017"
     volumes:
       - dbdata:/data/db
+
 volumes:
   dbdata:
