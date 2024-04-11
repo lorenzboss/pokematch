@@ -27,8 +27,8 @@ app.get('/', navController.goIndex);
 app.post('/api/winner', winController.create);
 
 
-app.listen(PORT, () => {
-    console.log(`Listening on http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Listening on http://localhost:${PORT}`);
 });
 
 app.get('/api/leaderboard', leaderboardController.getLeaderboard);
