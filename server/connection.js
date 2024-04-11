@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.DB_URL);
+        await mongoose.connect("mongodb://db:27017/pokeDB");
         console.log("Connected to the database");
     } catch (error) {
         console.log(error);
