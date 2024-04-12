@@ -6,6 +6,10 @@ Use the package manager:
 npm
 ```
 
+<a href="https://github1s.com/lorenzboss/pokematch/blob/main/.devcontainer/devcontainer.json">
+  <img src="https://img.shields.io/badge/Open_in-DevContainer-blue?logo=visual-studio-code" alt="Open in Visual Studio Code" height="30">
+</a>
+
 ### Usage
 
 First step: `run a new terminal`
