@@ -1,4 +1,4 @@
-# PokeMatch a simply devcontainer
+# PokeMatch a simple devcontainer
 
 ## Devcontainer
 
