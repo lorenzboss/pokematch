@@ -4,13 +4,9 @@
 
 ### Start the project
 
-<a href="https://github1s.com/lorenzboss/pokematch/blob/main/.devcontainer/devcontainer.json">
+<a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/lorenzboss/pokematch.git">
   <img src="https://img.shields.io/badge/Open_in-DevContainer-blue?logo=visual-studio-code" alt="Open in Visual Studio Code" height="30">
 </a>
-
-[
-![Open in Remote - Containers](https://xebia.com/wp-content/uploads/2023/11/v1.svg)
-](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/lorenzboss/pokematch.git)
 
 <br>
 
