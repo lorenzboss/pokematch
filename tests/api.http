@@ -5,10 +5,11 @@ GET http://localhost:4040/api/leaderboard
 ###
 
 POST http://localhost:4040/api/winner
-content-type: application/json
+Content-Type: application/json
+
 {
-    "time": 12,
-    "moves": 14,
-    "user": "Red"
+    "time": 66,
+    "moves": 29,
+    "user": "Tobias Topp"
 }
 ###
