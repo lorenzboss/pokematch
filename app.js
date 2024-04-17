@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
@@ -25,8 +24,8 @@ app.get("/pokeAPI", (req, res) => {
 app.get("/", navController.goIndex);
 app.post("/api/winner", winController.create);
 
+app.get("/api/leaderboard", leaderboardController.getLeaderboard);
+
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Listening on http://localhost:${PORT}`);
 });
-
-app.get("/api/leaderboard", leaderboardController.getLeaderboard);
