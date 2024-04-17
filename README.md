@@ -46,10 +46,11 @@ node sample-data.js
 
 ### Additional information
 
-1. The website will be running on port `4040`
-2. The database-tool mongo-express will be running on port `8081`
-3. The credentials for mongo-express are `admin` and `pass`
-4. The database is running on port `27017` (you don't need to access it directly)
+1. If the extensions in Visual Studio Code will not get installed automatically, rebuild the DevContainer, this will install all extensions
+2. The website will be running on port `4040`
+3. The database-tool mongo-express will be running on port `8081`
+4. The credentials for mongo-express are `admin` and `pass`
+5. The database is running on port `27017` (you don't need to access it directly)
 
 ### Tools
 
