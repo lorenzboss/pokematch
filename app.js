@@ -4,7 +4,7 @@ const path = require("path");
 const fs = require("fs");
 const cors = require("cors");
 const app = express();
-const PORT = process.env.PORT ?? 4040;
+const PORT = process.env.PORT ?? 80;
 
 const navController = require("./server/controllers/navController");
 const winController = require("./server/controllers/winController");

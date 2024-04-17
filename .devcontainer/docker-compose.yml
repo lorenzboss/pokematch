@@ -6,7 +6,6 @@ services:
     ports:
       - "4040:4040"
     environment:
-      - URL=${URL}
       - DB_URL=${DB_URL}
     depends_on:
       - db
