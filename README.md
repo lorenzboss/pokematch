@@ -24,7 +24,7 @@
 1. Make sure you have installed [Docker](https://www.docker.com/get-started) and [Visual Studio Code](https://code.visualstudio.com/download) with the [DevContainer](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
 2. Click on the button above (on [github](https://github.com/lorenzboss/pokematch))
 3. All dependencies, extensions and tools will be installed automatically
-4. Copy the .env.sample file and rename it to .env
+4. Copy the `.env.sample` file and rename it to `.env`
 5. Run the project with `F5` or `Ctrl+F5` or `npm run dev`
 
 ### Start the project manually
@@ -33,7 +33,7 @@
 2. Clone the repository in Visual Studio Code
 3. Reopen the project in a DevContainer
 4. All dependencies, extensions and tools will be installed automatically
-5. Copy the .env.sample file and rename it to .env
+5. Copy the `.env.sample` file and rename it to `.env`
 6. Run the project with `F5` or `Ctrl+F5` or `npm run dev`
 
 ### Initialize sample data
