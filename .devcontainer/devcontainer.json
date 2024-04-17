@@ -2,7 +2,7 @@
   "name": "pokematch",
   "dockerComposeFile": ["docker-compose.yml"],
   "service": "app",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceFolder": "/workspaces/pokematch",
   "postCreateCommand": "npm install; node /workspaces/pokematch/.devcontainer/sample-data.js",
   "customizations": {
     "vscode": {
