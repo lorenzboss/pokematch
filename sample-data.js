@@ -1,5 +1,5 @@
-const { connectDB, disconnectDB } = require("../server/connection");
-const winnerUser = require("../server/database/schemas/winnerSchema");
+const { connectDB, disconnectDB } = require("./server/connection");
+const winnerUser = require("./server/database/schemas/winnerSchema");
 
 const initializeSampleData = async (data) => {
   try {
